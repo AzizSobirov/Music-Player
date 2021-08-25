@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffe2ab">
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Music Player</title>
+</head>
+<body>
+<div id="app">
+    <header class="head" id="head">
+        <nav class="head__nav">
+            <h2>
+                <i onclick="navOpen()" class="far fa-bars"></i> Music Player
+            </h2>
+            <h2 onclick="searchNav()"><i class="far fa-search"></i></h2>
+            <div class="head__nav-list"><ul></ul></div>
+            <div class="head__nav-close" onclick="navOpen()"></div>
+        </nav>
+        <nav class="head__search">
+            <div class="head__search-nav">
+                <i class="far fa-search"></i>
+                <input type="text" placeholder="Search Music" oninput="searchMusic(this.value.toUpperCase())">
+            </div>
+            <div class="head__search-list"><ul></ul></div>
+        </nav>
+        <div class="head__search-close" onclick="searchNav()"></div>
+
+<!-- head content -->
+        <div class="head-content">
+            <h4>#Staysasfe</h4>
+            <h2>The journey <br> begins inside</h2>
+            <img src="./img/girl.svg" alt="">
+        </div>
+        <div class="head-player"></div>
+    </header>
+</div>
+    <script src="./js/index.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/musics.js"></script>
+</body>
+</html>
