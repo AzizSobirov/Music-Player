@@ -138,9 +138,13 @@ function pause(){
 // add favourite music
 function favourite(i){
     let fv_btn = document.getElementById("fv_btn")
+    let fv_musics = document.getElementById("favouriteMusics")
+
     if(!fv){
         fv = true
         console.log("Added " + musics[i].name )
+        fv_musics.innerHTML+=
+        `<li><h3><i class="far fa-music"></i></h3><h4>${musics[i].name} - ${musics[i].title} </h4></li>`
         fv_btn.style.background="#E8990D"
         fv_btn.style.color="#fff"
         

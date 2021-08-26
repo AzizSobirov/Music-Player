@@ -487,7 +487,7 @@ input, select, button {
 
 .head-player:hover {
   padding: 20px 0;
-  height: 350px;
+  height: 380px;
   background: #ffffff90;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -555,10 +555,82 @@ input, select, button {
       -ms-flex-pack: center;
           justify-content: center;
   scroll-snap-align: start;
-  background: #f1f1f1;
+  background: url(../img/head_bg.png) center/cover;
 }
 
-.sec1 li {
+.sec1 ul {
+  padding: 20px;
+  text-align: center;
+  background: #f1f1f190;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.sec1 ul li:not(:first-child) {
+  text-align: left;
+  margin-top: 10px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.sec1 ul li:not(:first-child) h3 {
+  height: 45px;
+  width: 45px;
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  background: #E8990D;
+  color: #fff;
+}
+
+.sec1 ul li:not(:first-child):hover {
+  background: #E8990D20;
+}
+
+.footer {
+  min-height: 100vh;
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  scroll-snap-align: start;
+  background: url(../img/head_bg.png) center/cover;
+}
+
+.footer ul {
+  padding: 20px;
+  background: #f1f1f190;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.footer ul li {
   text-align: center;
   margin: 15px 0;
   display: -webkit-box;
@@ -572,7 +644,7 @@ input, select, button {
           justify-content: center;
 }
 
-.sec1 li a {
+.footer ul li a {
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -588,7 +660,7 @@ input, select, button {
   background: #cfcdcd70;
 }
 
-.sec1 li a:hover {
+.footer ul li a:hover {
   -webkit-animation: jello-horizontal 0.9s both;
           animation: jello-horizontal 0.9s both;
 }
@@ -655,7 +727,7 @@ input, select, button {
   }
 }
 
-.sec1 li a:not(:last-child) {
+.footer ul li a:not(:last-child) {
   margin-right: 25px;
 }
 /*# sourceMappingURL=style.css.map */

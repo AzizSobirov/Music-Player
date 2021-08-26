@@ -3,14 +3,17 @@ let nav_lists = [
         name:"Home",
         url:"head"
     },{
-        name:"About",
+        name:"Your Favourites",
+        url:"heart"
+    },{
+        name:"About Us",
         url:"about"
     }
 ]
 
 let navList = document.querySelector('.head__nav-list')
 for(let i=0;i<nav_lists.length;i++){
-    navList.innerHTML+= `<li>
+    navList.innerHTML+= `<li onclick="navOpen()">
     <a href="#${nav_lists[i].url}">
     <p>${nav_lists[i].name}</p>
     <i class="far fa-angle-right"></i>
