@@ -1,11 +1,22 @@
 @import 'other';
 
+#app{
+    height: 100vh;
+    width: 100vw;
+    @include flexbox(flex-start);
+    // flex-direction: column;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
 .head{
     position: relative;
     min-height: 100vh;
+    min-width: 100%;
     padding: 15px;
     @include flexbox;
-    flex-direction: column;
+    scroll-snap-align: start;
     background: url(../img/head_bg.png) center/cover;
     &__nav{
         position: fixed;
@@ -14,6 +25,8 @@
         padding: 0 10px;
         height: 55px;
         width: 100%;
+        z-index: 2;
+        // background: #ffe2ab;
         @include flexbox(space-between);
         &-list{
             position: fixed;
@@ -25,6 +38,7 @@
             background: #f1f1ff80;
             backdrop-filter: blur(10px);
             list-style: none;
+            z-index: 2;
             transition: 1s;
             li{
                 padding: 0 10px;
@@ -190,6 +204,13 @@
                 100%{transform: rotate(360deg)}
             }  
         }
+        .artist{
+            margin: 10px 0;
+            text-align: center;
+            h4:nth-child(2){
+                font-size: 14px;
+            }
+        }
         .range{
             @include flexbox;
             display: none;
@@ -262,6 +283,57 @@
                     }
                 }
             }
+        }
+    }
+}
+
+
+// section 1
+.sec1{
+    min-height: 100vh;
+    min-width: 100%;
+    @include flexbox;
+    scroll-snap-align: start;
+    background: #f1f1f1;
+    li{
+        text-align: center;
+        margin: 15px 0;
+        @include flexbox;
+        a{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            @include flexbox;
+            background: #cfcdcd70;
+            &:hover{
+                animation: jello-horizontal 0.9s both;
+            }
+        }
+        @keyframes jello-horizontal {
+            0% {
+              transform: scale3d(1, 1, 1);
+            }
+            30% {
+              transform: scale3d(1.25, 0.75, 1);
+            }
+            40% {
+              transform: scale3d(0.75, 1.25, 1);
+            }
+            50% {
+              transform: scale3d(1.15, 0.85, 1);
+            }
+            65% {
+              transform: scale3d(0.95, 1.05, 1);
+            }
+            75% {
+              transform: scale3d(1.05, 0.95, 1);
+            }
+            100% {
+              transform: scale3d(1, 1, 1);
+            }
+          }
+        a:not(:last-child){
+            margin-right: 25px;
         }
     }
 }

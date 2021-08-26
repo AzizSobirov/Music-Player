@@ -13,10 +13,8 @@
 <div id="app">
     <header class="head" id="head">
         <nav class="head__nav">
-            <h2>
-                <i onclick="navOpen()" class="far fa-bars"></i> Music Player
-            </h2>
-            <h2 onclick="searchNav()"><i class="far fa-list-music"></i></h2>
+            <h2><i onclick="navOpen()" class="far fa-bars" style="cursor: pointer;"></i> Music Player</h2>
+            <h2 onclick="searchNav()"><i class="far fa-search"></i></h2>
             <div class="head__nav-list"><ul></ul></div>
             <div class="head__nav-close" onclick="navOpen()"></div>
         </nav>
@@ -37,6 +35,27 @@
         </div>
         <div class="head-player"></div>
     </header>
+
+    <!-- section 1 -->
+    <section1 id="about" class="sec1">
+        <ul>
+            <li><h2>About Us</h2></li>
+            <li><p>This web app created by Aziz Sobirov, <br> you may listen any musics in our web app <br> with hight resolution. More options soon...</p></li>
+            <li><h3>Follow Us</h3></li>
+            <li>
+                <a href="https://www.facebook.com/aziz.webdev">
+                    <h2 class="fab fa-facebook"></h2>
+                </a><a href="https://www.instagram.com/aziz.webdev">
+                    <h2 class="fab fa-instagram"></h2>
+                </a><a href="https://github.com/AzizSobirov">
+                    <h2 class="fab fa-github"></h2>
+                </a><a href="https://www.facebook.com//portfolio_azizsobirov">
+                    <h2 class="fab fa-telegram"></h2>
+                </a>
+            </li>
+            <li>&copy 26.08.2021</li>
+        </ul>
+    </section1>
 </div>
     <script src="./js/index.js"></script>
     <script src="./js/data.js"></script>

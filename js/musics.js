@@ -11,7 +11,10 @@ function loadMusic(i){
 <div class="music">
     <img src="${musics[i].image}">
 </div>
-<h4>${musics[i].name}</h4>
+<span class="artist">
+    <h4>${musics[i].name}</h4>
+    <h4>${musics[i].title}</h4>
+</span>
 <div class="range">
     <h4 id="curTime">00:00</h4>
     <input type="range" id="range" min="0" value="0">
@@ -99,9 +102,7 @@ function forward(){
 
 // play music
 function playMusic(){
-    let artist_img = document.querySelector(".music img")
     audioPlayed ? pause() : play()   
-    artist_img.style.animationPlayState = audioPlayed ? 'running' : 'paused';
 }
 
 // play
@@ -115,6 +116,9 @@ function play(){
     play_btn.style.background="#E8990D"
     play_btn.style.color="#fff"
     audio.play()  
+    let artist_img = document.querySelector(".music img")
+    artist_img.style.animationPlayState ='running';
+
 }
 // pause
 function pause(){
@@ -126,7 +130,9 @@ function pause(){
     play_btn_i.style.transform="translateX(2px)"
     play_btn.style.background="transparent"
     play_btn.style.color="#E8990D"
-    audio.pause() 
+    audio.pause()
+    let artist_img = document.querySelector(".music img")
+    artist_img.style.animationPlayState ='paused'; 
 }
 
 // add favourite music
@@ -160,4 +166,24 @@ function selectedMusic(s_Music){
     loadMusic(s_Music)
     searchNav()
     play()
+}
+
+
+
+// search music
+function searchMusic(filter){
+    console.log("working")
+    let allproject = document.querySelector(".head__search-list ul")
+    let s_project = allproject.querySelectorAll("li")
+    for(let i=0;i<s_project.length;i++){
+        let s_name = s_project[i].querySelector("h3")
+        if(s_name){
+            let s_value = s_name.innerHTML;
+            if(s_value.toUpperCase().indexOf(filter) > -1){
+                s_project[i].style.display=""
+            }else{
+                s_project[i].style.display="none"
+            }
+        }
+    }
 }
