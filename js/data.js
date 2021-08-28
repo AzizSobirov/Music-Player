@@ -29,5 +29,10 @@ let musics = [
     title:"Оксана Ковалевская",
     src:"https://dl6.ru-music.cc/mp3/54539.mp3",
     image:"https://muzzona.info/uploads/posts/2020-12/1609162182_mzhsawvvpru.jpg",
+},{
+    name:"Гудзон",
+    title:"Пьяная Ночь (Kalashnikoff Edit Remix)",
+    src:"https://dl5.ru-music.cc/mp3/17486.mp3",
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6yaJ7YuWxAkiLoOYYOghvnyWc5bUOqeJeIQ&usqp=CAU",
 }
 ]

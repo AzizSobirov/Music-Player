@@ -504,8 +504,8 @@ input, select, button {
   width: 180px;
   -webkit-animation: soundEffect 1s linear infinite;
           animation: soundEffect 1s linear infinite;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 @-webkit-keyframes soundEffect {
