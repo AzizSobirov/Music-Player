@@ -118,7 +118,8 @@ function play(){
     audio.play()  
     let artist_img = document.querySelector(".music img")
     artist_img.style.animationPlayState ='running';
-
+    let artist_bx = document.querySelector(".music")
+    artist_bx.style.animationPlayState ='running'; 
 }
 // pause
 function pause(){
@@ -131,8 +132,10 @@ function pause(){
     play_btn.style.background="transparent"
     play_btn.style.color="#E8990D"
     audio.pause()
+    let artist_bx = document.querySelector(".music")
     let artist_img = document.querySelector(".music img")
     artist_img.style.animationPlayState ='paused'; 
+    artist_bx.style.animationPlayState ='paused'; 
 }
 
 // add favourite music
@@ -161,7 +164,7 @@ function favourite(i){
 function searchBarMusics(){
     for(let m=0;m<musics.length;m++){
             document.querySelector(".head__search-list ul").innerHTML+= `
-            <li onclick="selectedMusic(${m})"><h3><i class="far fa-music"></i></h3><h4>${musics[m].name}</h4></li>`
+            <li onclick="selectedMusic(${m})"><h3><i class="far fa-music"></i></h3><span><h4>${musics[m].name}</h4><h5>${musics[m].title}</h5></span></li>`
     }
 }searchBarMusics()
 
@@ -180,7 +183,7 @@ function searchMusic(filter){
     let allproject = document.querySelector(".head__search-list ul")
     let s_project = allproject.querySelectorAll("li")
     for(let i=0;i<s_project.length;i++){
-        let s_name = s_project[i].querySelector("h3")
+        let s_name = s_project[i].querySelector("h4")
         if(s_name){
             let s_value = s_name.innerHTML;
             if(s_value.toUpperCase().indexOf(filter) > -1){

@@ -279,8 +279,8 @@ input, select, button {
 
 .head__search-list ul li h3:nth-child(1) {
   margin-right: 10px;
-  height: 35px;
-  width: 35px;
+  min-height: 35px;
+  min-width: 35px;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -366,6 +366,10 @@ input, select, button {
 }
 
 .head-player .music {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -378,11 +382,9 @@ input, select, button {
 }
 
 .head-player .music img {
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  -webkit-animation: rotate 5s linear infinite;
-          animation: rotate 5s linear infinite;
+  width: 100%;
+  -webkit-animation: rotate 10s linear infinite;
+          animation: rotate 10s linear infinite;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }
@@ -497,9 +499,67 @@ input, select, button {
           flex-direction: column;
 }
 
-.head-player:hover .music img {
+.head-player:hover .music {
   height: 180px;
   width: 180px;
+  -webkit-animation: soundEffect 1s linear infinite;
+          animation: soundEffect 1s linear infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+@-webkit-keyframes soundEffect {
+  0% {
+    -webkit-box-shadow: 0 0 0 0px #E8990D40;
+            box-shadow: 0 0 0 0px #E8990D40;
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  25% {
+    -webkit-box-shadow: 0 0 0 15px #E8990D20;
+            box-shadow: 0 0 0 15px #E8990D20;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0 #E8990D40;
+            box-shadow: 0 0 0 0 #E8990D40;
+  }
+  75% {
+    -webkit-box-shadow: 0 0 0 5px #E8990D40;
+            box-shadow: 0 0 0 5px #E8990D40;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 15px #E8990D40;
+            box-shadow: 0 0 0 15px #E8990D40;
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes soundEffect {
+  0% {
+    -webkit-box-shadow: 0 0 0 0px #E8990D40;
+            box-shadow: 0 0 0 0px #E8990D40;
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  25% {
+    -webkit-box-shadow: 0 0 0 15px #E8990D20;
+            box-shadow: 0 0 0 15px #E8990D20;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0 #E8990D40;
+            box-shadow: 0 0 0 0 #E8990D40;
+  }
+  75% {
+    -webkit-box-shadow: 0 0 0 5px #E8990D40;
+            box-shadow: 0 0 0 5px #E8990D40;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 15px #E8990D40;
+            box-shadow: 0 0 0 15px #E8990D40;
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
 }
 
 .head-player:hover .range {
