@@ -34,5 +34,15 @@ let musics = [
     title:"Пьяная Ночь (Kalashnikoff Edit Remix)",
     src:"https://dl5.ru-music.cc/mp3/17486.mp3",
     image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6yaJ7YuWxAkiLoOYYOghvnyWc5bUOqeJeIQ&usqp=CAU",
+},{
+    name:"Bahh Tee, Turken",
+    title:"Пройдёшь",
+    src:"https://dl4.ru-music.cc/mp3/57480.mp3",
+    image:"https://gidmp3.ru/uploads/posts/2021-09/1631228283_bahh-tee-turken-projdesh.jpg",
+},{
+    name:"Султан Лагучев",
+    title:"Горький вкус",
+    src:"https://dl6.ru-music.cc/mp3/55001.mp3",
+    image:"https://text-pesni.com/public/img/songs/565701769/1.jpg",
 }
 ]
